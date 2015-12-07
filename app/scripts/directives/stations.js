@@ -8,6 +8,7 @@
  * @example <stations></stations>
  * # stations
  */
+
 angular.module('weatherApp')
   .directive('stations', stationsInfo);
 
@@ -17,14 +18,14 @@ angular.module('weatherApp')
         templateUrl: '/views/stations.html',
         restrict: 'E',
         scope: {},
-        controller: StationController,
-        controllerAs: 'station',
+        controller: 'StationController',
+        controllerAs: 'vm',
         bindToController: true
     };
     return directive;
 
-    function link(scope, element, attrs) {
-        element.text('this is the stations directive');
+    function link(scope, el, attr, ctrl) {
+        
     }
 
   }
