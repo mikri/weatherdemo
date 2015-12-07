@@ -2,16 +2,12 @@
 
 /**
  * @ngdoc function
- * @name weatherappApp.controller:MainCtrl
+ * @name weatherApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the weatherappApp
+ * Controller of the weatherApp
  */
-angular.module('weatherappApp')
+angular.module('weatherApp')
   .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    
   });

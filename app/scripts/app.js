@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name weatherappApp
+ * @name weatherApp
  * @description
- * # weatherappApp
+ * # weatherApp
  *
  * Main module of the application.
  */
 angular
-  .module('weatherappApp', [
+  .module('weatherApp', [
     'ngAnimate',
     'ngCookies',
     'ngMessages',

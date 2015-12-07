@@ -3,22 +3,29 @@
 
 /**
  * @ngdoc directive
- * @name weatherappApp.directive:stations
+ * @name weatherApp.directive:stations
  * @description
  * @example <stations></stations>
  * # stations
  */
-angular.module('weatherappApp')
+angular.module('weatherApp')
   .directive('stations', stationsInfo);
 
   function stationsInfo() {
-    return {
-      template: '<div></div>',
-      restrict: 'E',
-      link: function postLink(scope, element) {
-        element.text('this is the stations directive');
-      }
+    var directive = {
+        link: link,
+        templateUrl: '/views/stations.html',
+        restrict: 'E',
+        scope: {},
+        controller: StationController,
+        controllerAs: 'station',
+        bindToController: true
     };
-      /* implementation details */
+    return directive;
+
+    function link(scope, element, attrs) {
+        element.text('this is the stations directive');
+    }
+
   }
 })();
