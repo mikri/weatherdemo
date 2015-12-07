@@ -19,7 +19,7 @@
       vm.markers = [];
       vm.getStations = getStations;
       vm.title = 'Stations';
-      vm.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+      vm.map = { center: { latitude: 60, longitude: 25 }, zoom: 8 };
 
 
       activate();
