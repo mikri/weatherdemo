@@ -14,7 +14,6 @@ angular.module('weatherApp')
 
   function stationsInfo() {
     var directive = {
-        link: link,
         templateUrl: '/views/stations.html',
         restrict: 'E',
         scope: {},
@@ -23,10 +22,6 @@ angular.module('weatherApp')
         bindToController: true
     };
     return directive;
-
-    function link(scope, el, attr, ctrl) {
-        
-    }
 
   }
 })();

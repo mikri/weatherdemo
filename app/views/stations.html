@@ -1,1 +1,23 @@
-<ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom'></ui-gmap-google-map>
+<ui-gmap-google-map ng-cloak center='vm.map.center' zoom='vm.map.zoom'>
+  <ui-gmap-markers
+    models="vm.markers"
+    coords="'coords'"
+    fit='true'>
+      <ui-gmap-windows ng-cloak>
+          <p ng-non-bindable>
+            Hi! <br>
+            I'm weather station <b>{{ name }}</b><br>
+            at: <b>lat {{ coords.longitude | number:4 }}, lon {{coords.longitude}}</b><br><br>
+            <b>Weather data</b><br>
+            temp: {{data.last.main.temp - 273.15 | number:2}}<br>
+            humidity: {{data.last.main.humidity}}<br>
+            pressure: {{data.last.main.pressure}}<br>
+            wind speed: {{data.last.wind.pressure}}<br>
+            wind gust: {{data.last.wind.gust}}<br>
+            wind deg: {{data.last.wind.deg}}<br>
+            rain today: {{data.last.rain.today}}<br>
+            rain 1h: {{data.last.rain['1h']}}
+          </p>
+      </ui-gmap-windows>
+  </ui-gmap-markers>
+</ui-gmap-google-map>
