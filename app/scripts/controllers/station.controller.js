@@ -32,7 +32,7 @@
       }
 
       function getStations() {
-        $http.get('http://api.openweathermap.org/data/2.5/station/find?lat=60&lon=24&cnt=50&units=metric&APPID=<YOUR_APPID>', {cache: true})
+        $http.get('http://api.openweathermap.org/data/2.5/station/find?lat=60&lon=24&cnt=50&units=metric&APPID=<APPID>', {cache: true})
           .success(function(response) {
             var m = [];
             for (var i = 0; i < response.length; i++) {
